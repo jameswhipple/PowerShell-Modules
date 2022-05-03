@@ -1,4 +1,5 @@
-
+function Write-Log {
+    
 <#
     .SYNOPSIS
     Write to a log file
@@ -26,8 +27,6 @@
     PS> Write-Log -LogMessage "Error starting ssms service" -LogLevel:ERROR -LogFile C:\AuditLogs\16-Jan-2022Audit.log
 
 #>
-
-function Write-Log {
     [cmdletbinding(SupportsShouldProcess)] # Allows for -WhatIf processing
     Param(
         [Parameter(Mandatory)]
